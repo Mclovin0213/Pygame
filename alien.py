@@ -1,6 +1,8 @@
 import pygame
 from pygame.sprite import Sprite
 
+from powerup import Power_Up
+
 class Alien(Sprite):
     """A class to represent a single alien in the fleet"""
     
@@ -20,6 +22,10 @@ class Alien(Sprite):
         
         # Store the alien's exact horizontal position
         self.x = float(self.rect.x)
+        self.y = float(self.rect.y)
+        
+        # Initialize PowerUp Instance
+        # self.power_up = Power_Up(self, ai_game)
     
     def check_edges(self):
         """Return True if alien is at edge of screen."""
